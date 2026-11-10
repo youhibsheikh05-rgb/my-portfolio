@@ -30,11 +30,16 @@ export default function MernProjects() {
                     {/* IMAGE YA FALLBACK (01) WALA SECTION */}
                     <div className={`h-56 relative overflow-hidden border-b border-zinc-800 ${p.image ? "bg-zinc-900" : `bg-gradient-to-br ${p.gradient}`}`}>
                       {p.image ? (
-                        <img
-                          src={p.image}
-                          alt={p.title}
-                          className="absolute inset-0 w-full h-full object-cover z-0 group-hover:scale-105 transition duration-500"
-                        />
+                      <img
+  src={p.image}
+  alt={p.title}
+  onError={(e) => {
+    console.log("IMAGE ERROR:", p.image);
+    console.log("ERROR DETAILS:", e);
+  }}
+  onLoad={() => console.log("IMAGE LOADED:", p.image)}
+  className="absolute inset-0 w-full h-full object-cover z-0"
+/>
                       ) : (
                         <div className="absolute inset-0 flex items-center justify-center z-0">
                           <span className="text-[140px] font-black text-white/[0.07] group-hover:scale-110 transition duration-700">{p.id}</span>
