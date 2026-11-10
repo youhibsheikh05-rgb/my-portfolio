@@ -4,3 +4,77 @@ body {
   font-family: 'JetBrains Mono', monospace;
   background-color: #0a0a0a;
 }
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fadeUp 0.6s ease-out both;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+.delay-6 { animation-delay: 0.6s; }
+
+.project-entry {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.project-entry:hover {
+  transform: translateX(4px);
+}
+
+/* Typing animation for name */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+.typing-name {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #4ade80;
+  animation: typing 2s steps(20) 0.3s both, blink 1s step-end infinite;
+  display: inline-block;
+  max-width: 100%;
+}
+
+/* Service card hover */
+.service-card {
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.service-card:hover {
+  border-color: rgba(74, 222, 128, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Status dots */
+.status-done { color: #4ade80; }
+.status-progress { color: #facc15; }
+.status-next { color: #6b7280; }
+
+/* Contact form inputs */
+.term-input {
+  background: transparent;
+  border: 1px solid #1f2937;
+  color: #e5e7eb;
+  padding: 8px 12px;
+  font-family: inherit;
+  font-size: 14px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.term-input:focus {
+  border-color: #4ade80;
+}
