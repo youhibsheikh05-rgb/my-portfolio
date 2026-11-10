@@ -9,5 +9,5 @@ export const personal = {
   githubUsername: "youhibsheikh05-rgb",
   linkedin: "https://linkedin.com/in/tumhara-profile",
   resume: "/resume.pdf",
-  avatar: "/avatar.jpg",
+  avatar: "/avatar.png",
 };

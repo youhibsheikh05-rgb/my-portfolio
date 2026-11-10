@@ -43,7 +43,7 @@ export default function Home() {
               <div className="bento-card p-8 h-full flex flex-col items-center justify-center text-center">
                 <div className="relative float">
                   <div className="absolute inset-0 bg-gradient-to-tr from-green-500/30 to-cyan-500/30 rounded-full blur-2xl"></div>
-                  <div className="relative w-40 h-40 rounded-full overflow-hidden border-2 border-zinc-800 glow-pulse bg-gradient-to-br from-green-500/10 to-cyan-500/10">
+                  <div className="relative w-64 h-64 rounded-full overflow-hidden border-2 border-zinc-800 glow-pulse bg-gradient-to-br from-green-500/10 to-cyan-500/10">
                     <img
                       src={personal.avatar}
                       alt={personal.name}
@@ -56,7 +56,6 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-6">
-                  <div className="text-sm text-zinc-500 mono">📍 {personal.location}</div>
                   <div className="text-xs text-zinc-600 mt-2 mono">~/mern + cloud</div>
                 </div>
               </div>
